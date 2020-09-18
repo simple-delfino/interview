@@ -1,0 +1,626 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>设计模式 · delfino小栈</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="delfino">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="数据结构和算法.html" />
+    
+    
+    <link rel="prev" href="服务器端.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    delfino的小栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../web/css部分.html">
+            
+                <a href="../web/css部分.html">
+            
+                    
+                    web基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../web/css部分.html">
+            
+                <a href="../web/css部分.html">
+            
+                    
+                    css部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../web/js部分.html">
+            
+                <a href="../web/js部分.html">
+            
+                    
+                    js部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../vue/简单说一说你对vuex理解.html">
+            
+                <a href="../vue/简单说一说你对vuex理解.html">
+            
+                    
+                    vue部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../vue/基础部分.html">
+            
+                <a href="../vue/基础部分.html">
+            
+                    
+                    基础部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../vue/简单说一说你对vuex理解.html">
+            
+                <a href="../vue/简单说一说你对vuex理解.html">
+            
+                    
+                    简单说一说你对vuex理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../vue/能说说双向绑定以及它的实现原理吗.html">
+            
+                <a href="../vue/能说说双向绑定以及它的实现原理吗.html">
+            
+                    
+                    能说说双向绑定以及它的实现原理吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../vue/你了解哪些Vue性能优化方法.html">
+            
+                <a href="../vue/你了解哪些Vue性能优化方法.html">
+            
+                    
+                    你了解哪些Vue性能优化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../vue/你如果想要扩展某个Vue组件时会怎么做.html">
+            
+                <a href="../vue/你如果想要扩展某个Vue组件时会怎么做.html">
+            
+                    
+                    你如果想要扩展某个Vue组件时会怎么做
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../vue/你了解vue中的diff算法吗.html">
+            
+                <a href="../vue/你了解vue中的diff算法吗.html">
+            
+                    
+                    你了解vue中的diff算法吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="../vue/你知道key的作用吗.html">
+            
+                <a href="../vue/你知道key的作用吗.html">
+            
+                    
+                    你知道key的作用吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="../vue/你知道nextTick吗，它是干什么的，实现原理是什么.html">
+            
+                <a href="../vue/你知道nextTick吗，它是干什么的，实现原理是什么.html">
+            
+                    
+                    你知道nextTick吗，它是干什么的，实现原理是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../vue/说一说你对vue响应式理解.html">
+            
+                <a href="../vue/说一说你对vue响应式理解.html">
+            
+                    
+                    说一说你对vue响应式理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="../vue/nextTick实现原理.html">
+            
+                <a href="../vue/nextTick实现原理.html">
+            
+                    
+                    nextTick实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="../vue/v-if和v-for哪个优先级更高.html">
+            
+                <a href="../vue/v-if和v-for哪个优先级更高.html">
+            
+                    
+                    v-if和v-for哪个优先级更高
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="../vue/vue-router中如何保护路由.html">
+            
+                <a href="../vue/vue-router中如何保护路由.html">
+            
+                    
+                    vue-router中如何保护路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="../vue/Vue2和Vue3中的响应式原理对比，分别的具体实现思路.html">
+            
+                <a href="../vue/Vue2和Vue3中的响应式原理对比，分别的具体实现思路.html">
+            
+                    
+                    Vue2和Vue3中的响应式原理对比，分别的具体实现思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.14" data-path="../vue/vue中组件之间的通信方式.html">
+            
+                <a href="../vue/vue中组件之间的通信方式.html">
+            
+                    
+                    vue中组件之间的通信方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../react/基础部分.html">
+            
+                <a href="../react/基础部分.html">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../react/基础部分.html">
+            
+                <a href="../react/基础部分.html">
+            
+                    
+                    react基础部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="性能优化.html">
+            
+                <a href="性能优化.html">
+            
+                    
+                    other
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="性能优化.html">
+            
+                <a href="性能优化.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="服务器端.html">
+            
+                <a href="服务器端.html">
+            
+                    
+                    服务器端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4.3" data-path="设计模式.html">
+            
+                <a href="设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="数据结构和算法.html">
+            
+                <a href="数据结构和算法.html">
+            
+                    
+                    数据结构和算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="手写代码.html">
+            
+                <a href="手写代码.html">
+            
+                    
+                    手写代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <!--<li>-->
+        <!--<a href="https://www.gitbook.com" target="blank" class="gitbook-link">-->
+            <!--本书使用 GitBook 发布-->
+        <!--</a>-->
+    <!--</li>-->
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >设计模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>&#x4E00;&#x3001;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#xFF1A;<a href="https://juejin.im/post/6844903513009422343" target="_blank">juejin.im/post/684490&#x2026;</a> <a href="https://juejin.im/post/6844903603107266567" target="_blank">juejin.im/post/684490&#x2026;</a> &#x5728;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x8BBE;&#x8BA1;&#x4E2D;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;(subject)&#xFF0C;&#x7EF4;&#x62A4;&#x4E00;&#x7CFB;&#x5217;&#x4F9D;&#x8D56;&#x4ED6;&#x7684;&#x5BF9;&#x8C61;&#xFF08;observer&#xFF09;&#xFF0C;&#x5F53;&#x4EFB;&#x4F55;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x81EA;&#x52A8;&#x901A;&#x77E5;&#x4ED6;&#x4EEC;&#x3002;&#x5F3A;&#x4F9D;&#x8D56;&#x5173;&#x7CFB; &#x7B80;&#x5355;&#x7406;&#x89E3;&#xFF1A;&#x6570;&#x636E;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x3002;&#x4E00;&#x4E2A;Subjet,&#x7528;&#x6765;&#x7EF4;&#x62A4;Observers,&#x4E3A;&#x67D0;&#x4E9B;event&#x6765;&#x901A;&#x77E5;&#xFF08;notify&#xFF09;&#x89C2;&#x5BDF;&#x8005;</p>
+<p>&#x4E8C;&#x3001;&#x53D1;&#x5E03;-&#x8BA2;&#x9605;&#x8005; &#x6709;&#x4E00;&#x4E2A;&#x4FE1;&#x606F;&#x4E2D;&#x4ECB;&#xFF0C;&#x8FC7;&#x6EE4; &#x8026;&#x5408;&#x6027;&#x4F4E; &#x5B83;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x79CD;&#x4E00;&#x5BF9;&#x591A;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x591A;&#x4E2A;&#x89C2;&#x5BDF;&#x8005;&#x5BF9;&#x8C61;&#x5BF9;&#x4E00;&#x4E2A;&#x4E3B;&#x9898;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x76D1;&#x542C;&#xFF0C;&#x5F53;&#x8FD9;&#x4E2A;&#x4E3B;&#x9898;&#x5BF9;&#x8C61;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x4F9D;&#x8D56;&#x7684;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x90FD;&#x4F1A;&#x88AB;&#x901A;&#x77E5;&#x5230;&#x3002;</p>
+</blockquote>
+<ul>
+<li>-&#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#xFF1A; 1.&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x89C2;&#x5BDF;&#x8005;&#x77E5;&#x9053;Subject ,&#x4E24;&#x8005;&#x662F;&#x76F8;&#x5173;&#x8054;&#x7684;&#xFF0C;&#x800C;&#x53D1;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x8005;&#x53EA;&#x6709;&#x901A;&#x8FC7;&#x4FE1;&#x606F;&#x4EE3;&#x7406;&#x8FDB;&#x884C;&#x901A;&#x4FE1; 2.&#x5728;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x7EC4;&#x4EF6;&#x5F0F;&#x677E;&#x6563;&#x8026;&#x5408;&#x7684;&#x3002;&#x6B63;&#x597D;&#x548C;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x76F8;&#x53CD;&#x3002; 3.&#x89C2;&#x5BDF;&#x8005;&#x5927;&#x90E8;&#x5206;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x4E8B;&#x4EF6;&#x7684;&#x89E6;&#x53D1;&#x3002;Subject&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x89C2;&#x5BDF;&#x8005;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x800C;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x8005;&#x5927;&#x591A;&#x6570;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF08;&#xFF09; 4.&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x9700;&#x8981;&#x5728;&#x5355;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4E2D;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x8005;&#x66F4;&#x50CF;&#x4EA4;&#x53C9;&#x5E94;&#x7528;&#x6A21;&#x5F0F;&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="服务器端.html" class="navigation navigation-prev " aria-label="Previous page: 服务器端">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="数据结构和算法.html" class="navigation navigation-next " aria-label="Next page: 数据结构和算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"设计模式","level":"2.4.3","depth":2,"next":{"title":"数据结构和算法","level":"2.4.4","depth":2,"path":"interview/other/数据结构和算法.md","ref":"interview/other/数据结构和算法.md","articles":[]},"previous":{"title":"服务器端","level":"2.4.2","depth":2,"path":"interview/other/服务器端.md","ref":"interview/other/服务器端.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","expandable-chapters","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"delfino","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"delfino小栈","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"好记性不如G笔记"},"file":{"path":"interview/other/设计模式.md","mtime":"2020-09-18T08:43:21.124Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-18T09:54:37.443Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

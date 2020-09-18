@@ -1,0 +1,691 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>你如果想要扩展某个Vue组件时会怎么做 · delfino小栈</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="delfino">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="你了解vue中的diff算法吗.html" />
+    
+    
+    <link rel="prev" href="你了解哪些Vue性能优化方法.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    delfino的小栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../web/css部分.html">
+            
+                <a href="../web/css部分.html">
+            
+                    
+                    web基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../web/css部分.html">
+            
+                <a href="../web/css部分.html">
+            
+                    
+                    css部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../web/js部分.html">
+            
+                <a href="../web/js部分.html">
+            
+                    
+                    js部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="简单说一说你对vuex理解.html">
+            
+                <a href="简单说一说你对vuex理解.html">
+            
+                    
+                    vue部分
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="基础部分.html">
+            
+                <a href="基础部分.html">
+            
+                    
+                    基础部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="简单说一说你对vuex理解.html">
+            
+                <a href="简单说一说你对vuex理解.html">
+            
+                    
+                    简单说一说你对vuex理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="能说说双向绑定以及它的实现原理吗.html">
+            
+                <a href="能说说双向绑定以及它的实现原理吗.html">
+            
+                    
+                    能说说双向绑定以及它的实现原理吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="你了解哪些Vue性能优化方法.html">
+            
+                <a href="你了解哪些Vue性能优化方法.html">
+            
+                    
+                    你了解哪些Vue性能优化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.5" data-path="你如果想要扩展某个Vue组件时会怎么做.html">
+            
+                <a href="你如果想要扩展某个Vue组件时会怎么做.html">
+            
+                    
+                    你如果想要扩展某个Vue组件时会怎么做
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="你了解vue中的diff算法吗.html">
+            
+                <a href="你了解vue中的diff算法吗.html">
+            
+                    
+                    你了解vue中的diff算法吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="你知道key的作用吗.html">
+            
+                <a href="你知道key的作用吗.html">
+            
+                    
+                    你知道key的作用吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="你知道nextTick吗，它是干什么的，实现原理是什么.html">
+            
+                <a href="你知道nextTick吗，它是干什么的，实现原理是什么.html">
+            
+                    
+                    你知道nextTick吗，它是干什么的，实现原理是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="说一说你对vue响应式理解.html">
+            
+                <a href="说一说你对vue响应式理解.html">
+            
+                    
+                    说一说你对vue响应式理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="nextTick实现原理.html">
+            
+                <a href="nextTick实现原理.html">
+            
+                    
+                    nextTick实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="v-if和v-for哪个优先级更高.html">
+            
+                <a href="v-if和v-for哪个优先级更高.html">
+            
+                    
+                    v-if和v-for哪个优先级更高
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="vue-router中如何保护路由.html">
+            
+                <a href="vue-router中如何保护路由.html">
+            
+                    
+                    vue-router中如何保护路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="Vue2和Vue3中的响应式原理对比，分别的具体实现思路.html">
+            
+                <a href="Vue2和Vue3中的响应式原理对比，分别的具体实现思路.html">
+            
+                    
+                    Vue2和Vue3中的响应式原理对比，分别的具体实现思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.14" data-path="vue中组件之间的通信方式.html">
+            
+                <a href="vue中组件之间的通信方式.html">
+            
+                    
+                    vue中组件之间的通信方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../react/基础部分.html">
+            
+                <a href="../react/基础部分.html">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../react/基础部分.html">
+            
+                <a href="../react/基础部分.html">
+            
+                    
+                    react基础部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../other/性能优化.html">
+            
+                <a href="../other/性能优化.html">
+            
+                    
+                    other
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../other/性能优化.html">
+            
+                <a href="../other/性能优化.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../other/服务器端.html">
+            
+                <a href="../other/服务器端.html">
+            
+                    
+                    服务器端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../other/设计模式.html">
+            
+                <a href="../other/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../other/数据结构和算法.html">
+            
+                <a href="../other/数据结构和算法.html">
+            
+                    
+                    数据结构和算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../other/手写代码.html">
+            
+                <a href="../other/手写代码.html">
+            
+                    
+                    手写代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <!--<li>-->
+        <!--<a href="https://www.gitbook.com" target="blank" class="gitbook-link">-->
+            <!--本书使用 GitBook 发布-->
+        <!--</a>-->
+    <!--</li>-->
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >你如果想要扩展某个Vue组件时会怎么做</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4F60;&#x5982;&#x679C;&#x60F3;&#x8981;&#x6269;&#x5C55;&#x67D0;&#x4E2A;vue&#x7EC4;&#x4EF6;&#x65F6;&#x4F1A;&#x600E;&#x4E48;&#x505A;&#xFF1F;">&#x4F60;&#x5982;&#x679C;&#x60F3;&#x8981;&#x6269;&#x5C55;&#x67D0;&#x4E2A;Vue&#x7EC4;&#x4EF6;&#x65F6;&#x4F1A;&#x600E;&#x4E48;&#x505A;&#xFF1F;</h2>
+<p>&#x6B64;&#x9898;&#x5C5E;&#x4E8E;&#x5B9E;&#x8DF5;&#x9898;&#xFF0C;&#x7740;&#x91CD;&#x8003;&#x5BDF;&#x5927;&#x5BB6;&#x5BF9;vue&#x5E38;&#x7528;api&#x4F7F;&#x7528;&#x719F;&#x7EC3;&#x5EA6;&#xFF0C;&#x7B54;&#x9898;&#x65F6;&#x4E0D;&#x4EC5;&#x8981;&#x5217;&#x51FA;&#x8FD9;&#x4E9B;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x540C;&#x65F6;&#x6700;&#x597D;&#x8BF4;&#x51FA;&#x4ED6;&#x4EEC;&#x5F02;&#x540C;&#x3002;</p>
+<h4 id="&#x7B54;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x7B54;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h4>
+<p>&#x6309;&#x7167;&#x903B;&#x8F91;&#x6269;&#x5C55;&#x548C;&#x5185;&#x5BB9;&#x6269;&#x5C55;&#x6765;&#x5217;&#x4E3E;&#xFF0C;&#x903B;&#x8F91;&#x6269;&#x5C55;&#x6709;&#xFF1A;mixins&#x3001;extends&#x3001;composition api&#xFF1B;&#x5185;&#x5BB9;&#x6269;&#x5C55;&#x6709;slots&#xFF1B;</p>
+<p>&#x5206;&#x522B;&#x8BF4;&#x51FA;&#x4ED6;&#x4EEC;&#x4F7F;&#x7528;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3001;&#x573A;&#x666F;&#x5DEE;&#x5F02;&#x548C;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4F5C;&#x4E3A;&#x6269;&#x5C55;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x8BF4;&#x8BF4;vue3&#x4E2D;&#x65B0;&#x5F15;&#x5165;&#x7684;composition api&#x5E26;&#x6765;&#x7684;&#x53D8;&#x5316;</p>
+<h4 id="&#x56DE;&#x7B54;&#x8303;&#x4F8B;&#xFF1A;">&#x56DE;&#x7B54;&#x8303;&#x4F8B;&#xFF1A;</h4>
+<ol>
+<li><p>&#x5E38;&#x89C1;&#x7684;&#x7EC4;&#x4EF6;&#x6269;&#x5C55;&#x65B9;&#x6CD5;&#x6709;&#xFF1A;mixins&#xFF0C;slots&#xFF0C;extends&#x7B49;</p>
+</li>
+<li><p>&#x6DF7;&#x5165;mixins&#x662F;&#x5206;&#x53D1; Vue &#x7EC4;&#x4EF6;&#x4E2D;&#x53EF;&#x590D;&#x7528;&#x529F;&#x80FD;&#x7684;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6DF7;&#x5165;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4EFB;&#x610F;&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#x3002;&#x5F53;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x6DF7;&#x5165;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x6DF7;&#x5165;&#x5BF9;&#x8C61;&#x7684;&#x9009;&#x9879;&#x5C06;&#x88AB;&#x6DF7;&#x5165;&#x8BE5;&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#x7684;&#x9009;&#x9879;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x590D;&#x7528;&#x4EE3;&#x7801;&#xFF1A;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x5BF9;&#x8C61;&#xFF0C;&#x9009;&#x9879;&#x548C;&#x7EC4;&#x4EF6;&#x91CC;&#x9762;&#x4E00;&#x6837;</span>
+<span class="hljs-keyword">const</span> mymixin = {
+    methods: {
+        dosomething(){}
+    }
+}
+<span class="hljs-comment">// &#x5168;&#x5C40;&#x6DF7;&#x5165;&#xFF1A;&#x5C06;&#x6DF7;&#x5165;&#x5BF9;&#x8C61;&#x4F20;&#x5165;</span>
+Vue.mixin(mymixin)
+
+<span class="hljs-comment">// &#x5C40;&#x90E8;&#x6DF7;&#x5165;&#xFF1A;&#x505A;&#x6570;&#x7EC4;&#x9879;&#x8BBE;&#x7F6E;&#x5230;mixins&#x9009;&#x9879;&#xFF0C;&#x4EC5;&#x4F5C;&#x7528;&#x4E8E;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;</span>
+<span class="hljs-keyword">const</span> Comp = {
+    mixins: [mymixin]
+}
+</code></pre>
+</li>
+<li><p>&#x63D2;&#x69FD;&#x4E3B;&#x8981;&#x7528;&#x4E8E;vue&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5206;&#x53D1;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x7EC4;&#x4EF6;&#x6269;&#x5C55;&#x3002;</p>
+<p>&#x5B50;&#x7EC4;&#x4EF6;Child</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span>&#x8FD9;&#x4E2A;&#x5185;&#x5BB9;&#x4F1A;&#x88AB;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x7684;&#x5185;&#x5BB9;&#x66FF;&#x6362;<span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>&#x7236;&#x7EC4;&#x4EF6;Parent</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Child</span>&gt;</span>&#x6765;&#x81EA;&#x8001;&#x7239;&#x7684;&#x5185;&#x5BB9;<span class="hljs-tag">&lt;/<span class="hljs-name">Child</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x7CBE;&#x786E;&#x5206;&#x53D1;&#x5230;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5177;&#x540D;&#x63D2;&#x69FD;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#x3002;</p>
+</li>
+<li><p>&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#x4E2D;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x4E0D;&#x592A;&#x5E38;&#x7528;&#x7684;&#x9009;&#x9879;extends&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8D77;&#x5230;&#x6269;&#x5C55;&#x7EC4;&#x4EF6;&#x7684;&#x76EE;&#x7684;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x6269;&#x5C55;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">const</span> myextends = {
+    methods: {
+        dosomething(){}
+    }
+}
+<span class="hljs-comment">// &#x7EC4;&#x4EF6;&#x6269;&#x5C55;&#xFF1A;&#x505A;&#x6570;&#x7EC4;&#x9879;&#x8BBE;&#x7F6E;&#x5230;extends&#x9009;&#x9879;&#xFF0C;&#x4EC5;&#x4F5C;&#x7528;&#x4E8E;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;</span>
+<span class="hljs-comment">// &#x8DDF;&#x6DF7;&#x5165;&#x7684;&#x4E0D;&#x540C;&#x662F;&#x5B83;&#x53EA;&#x80FD;&#x6269;&#x5C55;&#x5355;&#x4E2A;&#x5BF9;&#x8C61;</span>
+<span class="hljs-comment">// &#x53E6;&#x5916;&#x5982;&#x679C;&#x548C;&#x6DF7;&#x5165;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#xFF0C;&#x8BE5;&#x9009;&#x9879;&#x4F18;&#x5148;&#x7EA7;&#x8F83;&#x9AD8;&#xFF0C;&#x4F18;&#x5148;&#x8D77;&#x4F5C;&#x7528;</span>
+<span class="hljs-keyword">const</span> Comp = {
+    extends: myextends
+}
+</code></pre>
+</li>
+<li><p>&#x6DF7;&#x5165;&#x7684;&#x6570;&#x636E;&#x548C;&#x65B9;&#x6CD5;&#x4E0D;&#x80FD;&#x660E;&#x786E;&#x5224;&#x65AD;&#x6765;&#x6E90;&#x4E14;&#x53EF;&#x80FD;&#x548C;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x5185;&#x53D8;&#x91CF;&#x4EA7;&#x751F;&#x547D;&#x540D;&#x51B2;&#x7A81;&#xFF0C;vue3&#x4E2D;&#x5F15;&#x5165;&#x7684;composition api&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x5229;&#x7528;&#x72EC;&#x7ACB;&#x51FA;&#x6765;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x7F16;&#x5199;&#x72EC;&#x7ACB;&#x903B;&#x8F91;&#x5E76;&#x63D0;&#x4F9B;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x5728;setup&#x9009;&#x9879;&#x4E2D;&#x6709;&#x673A;&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x590D;&#x7528;&#x903B;&#x8F91;1</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useXX</span>(<span class="hljs-params"></span>) </span>{}
+<span class="hljs-comment">// &#x590D;&#x7528;&#x903B;&#x8F91;2</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useYY</span>(<span class="hljs-params"></span>) </span>{}
+<span class="hljs-comment">// &#x903B;&#x8F91;&#x7EC4;&#x5408;</span>
+<span class="hljs-keyword">const</span> Comp = {
+    setup() {
+        <span class="hljs-keyword">const</span> {xx} = useXX()
+        <span class="hljs-keyword">const</span> {yy} = useYY()
+        <span class="hljs-keyword">return</span> {xx, yy}
+    }
+}
+</code></pre>
+</li>
+</ol>
+<p>&#x53EF;&#x80FD;&#x7684;&#x8FFD;&#x95EE;</p>
+<p>Vue.extend&#x65B9;&#x6CD5;&#x4F60;&#x7528;&#x8FC7;&#x5417;&#xFF1F;&#x5B83;&#x80FD;&#x7528;&#x6765;&#x505A;&#x7EC4;&#x4EF6;&#x6269;&#x5C55;&#x5417;&#xFF1F;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="你了解哪些Vue性能优化方法.html" class="navigation navigation-prev " aria-label="Previous page: 你了解哪些Vue性能优化方法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="你了解vue中的diff算法吗.html" class="navigation navigation-next " aria-label="Next page: 你了解vue中的diff算法吗">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"你如果想要扩展某个Vue组件时会怎么做","level":"2.2.5","depth":2,"next":{"title":"你了解vue中的diff算法吗","level":"2.2.6","depth":2,"path":"interview/vue/你了解vue中的diff算法吗.md","ref":"interview/vue/你了解vue中的diff算法吗.md","articles":[]},"previous":{"title":"你了解哪些Vue性能优化方法","level":"2.2.4","depth":2,"path":"interview/vue/你了解哪些Vue性能优化方法.md","ref":"interview/vue/你了解哪些Vue性能优化方法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","expandable-chapters","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"delfino","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"delfino小栈","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"好记性不如G笔记"},"file":{"path":"interview/vue/你如果想要扩展某个Vue组件时会怎么做.md","mtime":"2020-09-18T08:26:23.597Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-18T09:54:37.443Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

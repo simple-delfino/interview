@@ -1,0 +1,20 @@
+{
+    "title": "delfino小栈",
+    "description": "好记性不如G笔记",
+    "author": "delfino",
+    "output.name": "site",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "plugins": [
+        "favicon",
+        "expandable-chapters"
+    ],
+    "pluginsConfig": {
+        "favicon": {
+            "shortcut": "assets/images/favicon.ico",
+            "bookmark": "assets/images/favicon.ico"
+        }
+    }
+
+}
